@@ -39,7 +39,7 @@ add_action( 'wp_head', 'dc_pingback_header' );
 /**
  * Register custom post type to characters
  */
-function custom_post_type() {
+function custom_post_type_character() {
 
 	$labels = array(
 		'name'                  => _x( 'Characters', 'Post Type General Name', 'text_domain' ),
@@ -94,4 +94,8 @@ function custom_post_type() {
 	register_post_type( 'character', $args );
 
 }
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'custom_post_type_character', 0 );
+
+/**
+ * Register custom style
+ */

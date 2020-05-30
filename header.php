@@ -15,8 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -25,35 +25,37 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dc' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$dc_description = get_bloginfo( 'description', 'display' );
-			if ( $dc_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $dc_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="site-header navbar-static-top"  role="banner">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<div class="container">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dc' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+				<div class="navbar-brand">
+					<?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+						<a href="<?php echo esc_url( home_url( '/' )); ?>">
+							<img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+						</a>
+					<?php else : ?>
+						<a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+					<?php endif; ?>
+				</div>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<?php
+					wp_nav_menu(array(
+						'theme_location'    => 'primary',
+						'container'       => 'div',
+						'container_id'    => 'main-nav',
+						'container_class' => 'collapse navbar-collapse justify-content-end',
+						'menu_id'         => false,
+						'menu_class'      => 'navbar-nav',
+						'depth'           => 3,
+						'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+						'walker'          => new wp_bootstrap_navwalker()
+					));
+				?>
+			</div>
+		</nav>
 	</header><!-- #masthead -->
