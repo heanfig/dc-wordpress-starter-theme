@@ -184,5 +184,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Add TGM activation
  */
-require get_template_directory() . '/inc/dc-core.php';
+require get_template_directory() . '/inc/tgm/dc-core.php';
 
