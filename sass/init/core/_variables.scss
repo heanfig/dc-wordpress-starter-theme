@@ -1,0 +1,19 @@
+
+$c1-primary   : #353531;
+$c2-primary   : #FF9505;
+$c3-accent    : #D74E09;
+$c3-accent    : #004385;
+$c4-accent    : #016FB9;
+
+/*
+* Theme Font base
+*/
+$theme-font-base : 'Gangster Grotesk';
+
+/*
+* Override Bootstrap Font Variable
+*/
+$font-family-sans-serif: $theme-font-base;
+$font-family-serif:      $theme-font-base;
+$font-family-monospace:  $theme-font-base;
+$font-family-base:       $font-family-sans-serif;

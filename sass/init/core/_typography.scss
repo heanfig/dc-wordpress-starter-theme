@@ -1,0 +1,32 @@
+/** Font Face Bold **/
+@font-face {
+	font-family: 'Gangster Grotesk';
+	src: url('fonts/ganster/Gangster_Grotesk_Bold_700.eot');
+    src: local('☺'), url('fonts/ganster/Gangster_Grotesk_Bold_700.woff') format('woff'), 
+                     url('fonts/ganster/Gangster_Grotesk_Bold_700.ttf') format('truetype'), 
+                     url('fonts/ganster/Gangster_Grotesk_Bold_700.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/** Font Face Regular **/
+@font-face {
+	font-family: 'Gangster Grotesk';
+	src: url('fonts/ganster/Gangster_Grotesk_Regular_400.eot');
+    src: local('☺'), url('fonts/ganster/Gangster_Grotesk_Regular_400.woff') format('woff'), 
+                     url('fonts/ganster/Gangster_Grotesk_Regular_400.ttf') format('truetype'), 
+                     url('fonts/ganster/Gangster_Grotesk_Regular_400.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/** Font Face Light **/
+@font-face {
+	font-family: 'Gangster Grotesk';
+	src: url('fonts/ganster/Gangster_Grotesk_Light_300.eot');
+    src: local('☺'), url('fonts/ganster/Gangster_Grotesk_Light_300.woff') format('woff'), 
+                     url('fonts/ganster/Gangster_Grotesk_Light_300.ttf') format('truetype'), 
+                     url('fonts/ganster/Gangster_Grotesk_Light_300.svg') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+}

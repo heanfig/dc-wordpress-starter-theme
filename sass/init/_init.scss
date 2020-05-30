@@ -1,9 +1,12 @@
+
 /*
- * Include Custom Modules
+ * Include Core Modules
  **/
-@import '../modules/layout/base';
+ @import 'core/typography';
+ @import 'core/variables';
 
 /*
  * Include Custom libraries
  **/
-@import "node_modules/bootstrap/scss/bootstrap";
+ @import "node_modules/bootstrap/scss/bootstrap";
+ 
