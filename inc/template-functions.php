@@ -75,7 +75,7 @@ function custom_post_type_character() {
 		'description'           => __( 'Character villain or superhero, or staff', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'character_type' ),
+		'taxonomies'            => array( 'character_type', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

@@ -1,0 +1,20 @@
+.single-character{
+    &_container{
+        margin: 3rem 0;
+        .dc-character{
+            &_gallery{
+                width: 43%;
+                float: left;
+            }
+            &_summary{
+                width: 55%;
+                float: left;
+                padding: 0rem 1rem;
+            }
+            &_tabs{
+                width: 100%;
+                float: left;
+            }
+        }
+    }
+}

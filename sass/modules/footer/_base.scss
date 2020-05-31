@@ -1,3 +1,7 @@
 .dc-footer{
-    background-color: red;
+    background-color: $c3-accent;
+    padding: 2rem 0;
+    p{
+        color: $primary-light;
+    }
 }

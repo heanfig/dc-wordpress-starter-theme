@@ -108,6 +108,11 @@ function dc_register_required_plugins() {
 			'slug'        => 'classic-editor',
 			'is_callable' => '',
 		),
+		array(
+			'name'        => 'WordPress Importer',
+			'slug'        => 'wordpress-importer',
+			'is_callable' => '',
+		),
 
 	);
 
