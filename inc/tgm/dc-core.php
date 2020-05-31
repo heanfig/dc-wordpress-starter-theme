@@ -103,11 +103,11 @@ function dc_register_required_plugins() {
 		// By setting 'is_callable' to either a function from that plugin or a class method
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
-		/*array(
-			'name'        => 'WordPress SEO by Yoast',
-			'slug'        => 'wordpress-seo',
-			'is_callable' => 'wpseo_init',
-		),*/
+		array(
+			'name'        => 'Classic Editor',
+			'slug'        => 'classic-editor',
+			'is_callable' => '',
+		),
 
 	);
 

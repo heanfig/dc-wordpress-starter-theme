@@ -9711,8 +9711,20 @@ a.text-dark:hover, a.text-dark:focus {
 /*
 * Import Modules Folder
 */
+.navbar {
+	background: #004385;
+}
+
+.navbar a {
+	color: #FFFFFF;
+}
+
+.navbar a:hover {
+	text-decoration: none;
+}
+
 .subnav {
-	background: red;
+	background: #016FB9;
 }
 
 .subnav ul {
@@ -9720,14 +9732,74 @@ a.text-dark:hover, a.text-dark:focus {
 	justify-content: center;
 	list-style-type: none;
 	padding: 0;
+	margin: 0;
 }
 
 .subnav li {
+	color: #FFFFFF;
 	padding: 0.5rem 1rem;
 	font-size: 19px;
-	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+
+.carousel-item {
+	min-height: 350px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.dc-character-loop {
+	margin: 2rem 0;
+}
+
+.dc-heading {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+.dc-heading__secondary {
+	font-size: 34px;
+	color: #FF9505;
+	line-height: 1.6em;
+	font-weight: bold;
+}
+
+.dc-heading__secondary span {
+	background: #fff;
+	position: relative;
+	padding: 0 20px;
+}
+
+.dc-heading__primary {
+	color: #004385;
+	font-size: 54px;
+	font-weight: 800;
+	font-style: normal;
+	text-transform: none;
+	line-height: 0.4em;
+}
+
+.dc-heading:before {
+	width: 100%;
+	height: 2px;
+	content: "";
+	background: #FF9505;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: auto;
+	bottom: 0;
+	right: 0;
+}
+
+.dc-footer {
+	background-color: red;
 }
 
 /*# sourceMappingURL=dc-theme.css.map */

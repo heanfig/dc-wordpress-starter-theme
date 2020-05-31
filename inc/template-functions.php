@@ -74,8 +74,8 @@ function custom_post_type_character() {
 		'label'                 => __( 'Character', 'text_domain' ),
 		'description'           => __( 'Character villain or superhero, or staff', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'            => array( 'character_type' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -97,5 +97,96 @@ function custom_post_type_character() {
 add_action( 'init', 'custom_post_type_character', 0 );
 
 /**
- * Register custom style
+ * Register custom meta Boxes
  */
+
+add_action( 'init', 'cyb_register_meta_fields' );
+function cyb_register_meta_fields() {
+  register_meta( 'character',
+               'cyb_name',
+               [
+                 'description'      => _x( 'Enter your name', 'meta description', 'cyb-textdomain' ),
+                 'single'           => true,
+                 'sanitize_callback' => 'sanitize_text_field',
+                 'auth_callback'     => 'cyb_custom_fields_auth_callback'
+               ]
+  );
+}
+
+function cyb_sanitize_extraordinary_person( $value ) {
+
+  // Si hay algún valor, el checbox fue seleccionado
+  if( ! empty( $value ) ) {
+    return 1;
+  } else {
+    return 0;
+  }
+
+}
+
+function cyb_custom_fields_auth_callback( $allowed, $meta_key, $post_id, $user_id, $cap, $caps ) {
+  
+  if( 'post' == get_post_type( $post_id ) && current_user_can( 'edit_post', $post_id ) ) {
+    $allowed = true;
+  } else {
+    $allowed = false;
+  }
+
+  return $allowed;
+
+}
+
+function global_notice_meta_box() {
+    $screens = array( 'character' );
+    foreach ( $screens as $screen ) {
+        add_meta_box(
+            'global-notice',
+            __( 'Character Information', 'dc' ),
+            'global_notice_meta_box_callback',
+            $screen
+        );
+    }
+}
+
+add_action( 'add_meta_boxes', 'global_notice_meta_box' );
+
+
+function global_notice_meta_box_callback( $post ) {
+    wp_nonce_field( 'global_notice_nonce', 'global_notice_nonce' );
+    $value = get_post_meta( $post->ID, '_global_notice', true );
+    echo '<textarea style="width:100%" id="global_notice" name="global_notice">' . esc_attr( $value ) . '</textarea>';
+}
+
+
+/**
+ * Register custom meta Boxes
+ */
+
+add_action( 'init', 'create_topics_hierarchical_taxonomy', 0 );
+
+function create_topics_hierarchical_taxonomy() {
+
+  $labels = array(
+    'name' => _x( 'Topics', 'taxonomy general name' ),
+    'singular_name' => _x( 'Topic', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Topics' ),
+    'all_items' => __( 'All Topics' ),
+    'parent_item' => __( 'Parent Topic' ),
+    'parent_item_colon' => __( 'Parent Topic:' ),
+    'edit_item' => __( 'Edit Topic' ), 
+    'update_item' => __( 'Update Topic' ),
+    'add_new_item' => __( 'Add New Topic' ),
+    'new_item_name' => __( 'New Topic Name' ),
+    'menu_name' => __( 'Character Type' ),
+  );    
+ 
+  register_taxonomy('character_type',array('character'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'character' ),
+  ));
+ 
+}

@@ -1,15 +1,16 @@
 .subnav {
-    background: red;
+    background: $c4-accent;
     ul {
         display: flex;
         justify-content: center;
         list-style-type: none;
         padding: 0;
+        margin: 0;
     }
     li{
+        color: $primary-light;
         padding: 0.5rem 1rem;
         font-size: 19px;
-        font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
     }

@@ -10,24 +10,20 @@
  */
 
 ?>
+		</div><!-- #page -->
+	</div><!-- .container -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dc' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'dc' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'dc' ), 'dc', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="text-muted site-footer dc-footer">
+		<div class="container">
+			<p class="float-right">
+				<a href="#">Back to top</a>
+				</p>
+				<p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+				<p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.
+			</p>
+		</div>
 	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+		
 <?php wp_footer(); ?>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 

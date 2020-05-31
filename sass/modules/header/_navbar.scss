@@ -1,0 +1,9 @@
+.navbar{
+    background: $c3-accent; 
+    a{
+        color: $primary-light;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

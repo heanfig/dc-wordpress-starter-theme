@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dc' ); ?></a>
 
 	<header id="masthead" class="site-header navbar-static-top"  role="banner">
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md">
 			<div class="container">
 
 				<div class="navbar-brand">
@@ -72,27 +72,18 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner" role="listbox">
-			<!-- Slide One - Set the background image for this slide in the line below -->
-			<div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
-				<div class="carousel-caption d-none d-md-block">
-				<h2 class="display-4">First Slide</h2>
-				<p class="lead">This is a description for the first slide.</p>
+				<div class="carousel-item active" style="background-image: url('https://i.redd.it/af5uskv42v3z.jpg')">
+					<div class="carousel-caption d-none d-md-block">
+					<h2 class="display-4">First Slide</h2>
+					<p class="lead">This is a description for the first slide.</p>
+					</div>
 				</div>
-			</div>
-			<!-- Slide Two - Set the background image for this slide in the line below -->
-			<div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
-				<div class="carousel-caption d-none d-md-block">
-				<h2 class="display-4">Second Slide</h2>
-				<p class="lead">This is a description for the second slide.</p>
+				<div class="carousel-item" style="background-image: url('https://i.pinimg.com/originals/90/5d/5e/905d5e54da2cc37a6f7c6f6db124402f.jpg')">
+					<div class="carousel-caption d-none d-md-block">
+					<h2 class="display-4">First Slide</h2>
+					<p class="lead">This is a description for the first slide.</p>
+					</div>
 				</div>
-			</div>
-			<!-- Slide Three - Set the background image for this slide in the line below -->
-			<div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
-				<div class="carousel-caption d-none d-md-block">
-				<h2 class="display-4">Third Slide</h2>
-				<p class="lead">This is a description for the third slide.</p>
-				</div>
-			</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,3 +96,5 @@
 		</div>
 
 	</header><!-- #masthead -->
+
+	<div class="container">
