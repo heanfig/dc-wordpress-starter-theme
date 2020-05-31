@@ -9793,6 +9793,114 @@ a.text-dark:hover, a.text-dark:focus {
 	margin: 2rem 0;
 }
 
+.dc-character-loop_content {
+	position: relative;
+	display: flex;
+}
+
+.dc-character-loop_content .dc-character-item {
+	width: 20%;
+	text-decoration: none;
+}
+
+.dc-character-loop_content .dc-character-item .card {
+	transition: 0.5s;
+	border: none;
+}
+
+.dc-character-loop_content .dc-character-item .card .card-body {
+	padding: 0;
+}
+
+.dc-character-loop_content .dc-character-item .card .card-title {
+	font-size: 19px;
+	font-weight: bold;
+	padding: 11px 0;
+	text-transform: uppercase;
+	color: #004385;
+	margin: 0;
+}
+
+.dc-character-loop_content .dc-character-item .card .card-meta {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.dc-character-loop_content .dc-character-item .card .card-meta li .card-meta_desc {
+	font-weight: bold;
+	color: #004385;
+}
+
+.dc-character-loop_content .dc-character-item .card:hover {
+	transform: scale(1.05);
+}
+
+.dc-character-loop_content .dc-character-preloader {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	background: #004385bd;
+	z-index: 9;
+}
+
+.dc-character-loop_content .dc-character-preloader .dc-character-icon {
+	position: absolute;
+	top: 0;
+	width: 3em;
+	bottom: 0;
+	height: 4em;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.dc-character-loop_content .dc-character-preloader .dc-character-icon i {
+	font-size: 58px;
+	color: #fff;
+}
+
+.dc-character-loop .dc-character-filter {
+	display: flex;
+	justify-content: space-between;
+	margin: 8px 0;
+}
+
+.dc-character-loop .dc-character-count {
+	font-weight: bold;
+	color: #004385;
+	align-self: flex-end;
+}
+
+.dc-character-loop .dc-character-count span {
+	color: #FF9505;
+	font-weight: bold;
+}
+
+.dc-character-loop .dc-character-count h2 {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.dc-character-loop form.dc-character-form {
+	display: flex;
+}
+
+.dc-character-loop .dc-character-form input {
+	border: none;
+	border-bottom: 2px solid #004385;
+	margin-right: 10px;
+	outline: none;
+	color: #004385;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.dc-character-loop .dc-character-form button {
+	background: blue;
+	border: none;
+}
+
 .dc-heading {
 	text-align: center;
 	padding-top: 30px;
@@ -9838,10 +9946,50 @@ a.text-dark:hover, a.text-dark:focus {
 .dc-footer {
 	background-color: #004385;
 	padding: 2rem 0;
+	background-image: url(https://www.dccomics.com/sites/all/themes/dc_comics_bp/images/logo-background-v2.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	min-height: 250px;
 }
 
 .dc-footer p {
 	color: #FFFFFF;
+}
+
+.dc-footer_boxes {
+	display: flex;
+}
+
+.dc-footer_boxes .dc-footer_box ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.dc-footer_boxes .dc-footer_box h5 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.dc-footer_boxes .dc-footer_box {
+	margin: 0 1rem;
+}
+
+.dc-footer_boxes .dc-footer_box ul li {
+	color: #fff;
+	font-size: 13px;
+}
+
+.dc-footer_boxes .dc-footer_box ul li a {
+	color: #FFF;
+	text-decoration: none;
+	margin: 3px 1px;
+	display: inline-block;
+}
+
+.dc-footer .dc-footer_copy {
+	margin: 3rem 0 0 1rem;
 }
 
 .dc-character_tabs .nav-tabs {
@@ -9857,6 +10005,24 @@ a.text-dark:hover, a.text-dark:focus {
 	background-color: rgba(1, 111, 185, 0.2);
 	border-radius: 0;
 	border-color: rgba(1, 111, 185, 0.2);
+}
+
+.dc-carousel.no_overlay .carousel-item:before {
+	display: none;
+}
+
+.dc-carousel .carousel-item:before {
+	position: absolute;
+	content: "";
+	background: rgba(21, 21, 21, 0.4);
+	width: 100%;
+	height: 100%;
+}
+
+.dc-carousel .carousel-caption h2 {
+	font-size: 4em;
+	text-align: left;
+	font-weight: bold;
 }
 
 /*
@@ -9894,19 +10060,38 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .single-character_container .dc-character_gallery {
-	width: 43%;
+	width: 25%;
 	float: left;
 }
 
 .single-character_container .dc-character_summary {
-	width: 55%;
+	width: 75%;
 	float: left;
 	padding: 0rem 1rem;
+}
+
+.single-character_container .dc-character_title {
+	color: #004385;
+	font-weight: bold;
 }
 
 .single-character_container .dc-character_tabs {
 	width: 100%;
 	float: left;
+}
+
+.single-character_container .dc-character_tabs .dc-tab-pane {
+	padding: 30px;
+	font-size: 17px;
+}
+
+.single-character_container .dc-character_tabs .nav-item .nav-link {
+	color: #004385;
+	font-weight: bold;
+}
+
+.single-character_container .dc-character_tabs .nav-item .nav-link i {
+	color: #FF9505;
 }
 
 /*# sourceMappingURL=dc-theme.css.map */

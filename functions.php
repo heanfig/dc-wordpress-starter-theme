@@ -151,7 +151,15 @@ function dc_scripts() {
 	 */
 	wp_enqueue_style( 'dc-theme', get_template_directory_uri() . '/dc-theme.css', array(), _S_VERSION );
 
+	/**
+	 * Enqueue script navigation
+	 */
 	wp_enqueue_script( 'dc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	/**
+	 * Enqueue Script Font Awesome
+	 */	
+	wp_enqueue_script( 'dc-font-awesome', 'https://kit.fontawesome.com/f73a4f26fe.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -167,6 +175,21 @@ function shapeSpace_include_custom_jquery() {
 
 }
 add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');
+
+/**
+ * Resolve Character
+ */
+function resolve_character_icon($taxonomy_data){
+	foreach($taxonomy_data as $taxonomy){
+		if($taxonomy->slug == "hero"){
+			return 'fa-mask';
+		}
+		if($taxonomy->slug == "villain"){
+			return 'fa-skull';
+		}
+	}
+	return 'fa-mask';
+}
 
 /**
  * Implement the Custom Header feature.

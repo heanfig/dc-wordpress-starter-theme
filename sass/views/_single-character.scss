@@ -3,17 +3,34 @@
         margin: 3rem 0;
         .dc-character{
             &_gallery{
-                width: 43%;
+                width: 25%;
                 float: left;
             }
             &_summary{
-                width: 55%;
+                width: 75%;
                 float: left;
                 padding: 0rem 1rem;
+            }
+            &_title {
+                color: #004385;
+                font-weight: bold;
             }
             &_tabs{
                 width: 100%;
                 float: left;
+
+                .dc-tab-pane {
+                    padding: 30px;
+                    font-size: 17px;
+                }
+                
+                .nav-item .nav-link {
+                    color: #004385;
+                    font-weight: bold;
+                    i{
+                        color: #FF9505;
+                    }
+                }
             }
         }
     }

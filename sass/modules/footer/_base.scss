@@ -1,7 +1,47 @@
 .dc-footer{
     background-color: $c3-accent;
     padding: 2rem 0;
+    background-image: url(https://www.dccomics.com/sites/all/themes/dc_comics_bp/images/logo-background-v2.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 250px;
     p{
         color: $primary-light;
     }
+    &_boxes{
+        display: flex;
+        .dc-footer_box ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        
+        .dc-footer_box h5 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .dc-footer_box {
+            margin: 0 1rem;
+        }
+        
+        .dc-footer_box ul li {
+            color: #fff;
+            font-size: 13px;
+            a {
+                color: #FFF;
+                text-decoration: none;
+                margin: 3px 1px;
+                display: inline-block;
+            }
+        }
+        
+    }
+
+    .dc-footer_copy {
+        margin: 3rem 0 0 1rem;
+    }
+
 }
+

@@ -1,3 +1,103 @@
 .dc-character-loop{
+    $block: '.dc-character';
     margin: 2rem 0;
+    &_content{
+        position: relative;
+        display: flex;
+        #{$block}-item{
+            width: 20%;
+            text-decoration: none;
+            .card{
+                transition: 0.5s;
+                border: none;
+                .card-body {
+                    padding: 0;
+                }
+                .card-title {
+                    font-size: 19px;
+                    font-weight: bold;
+                    padding: 11px 0;
+                    text-transform: uppercase;
+                    color: #004385;
+                    margin: 0;
+                }
+                .card-meta {
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    li {
+                        .card-meta_desc {
+                            font-weight: bold;
+                            color: #004385;
+                        }
+                    }
+                }
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        #{$block}-preloader {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            background: #004385bd;
+            z-index: 9;
+            .dc-character-icon {
+                position: absolute;
+                top: 0;
+                width: 3em;
+                bottom: 0;
+                height: 4em;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            .dc-character-icon i {
+                font-size: 58px;
+                color: #fff;
+            }
+        }
+    }
+
+    #{$block}-filter {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+    }
+    
+    #{$block}-count {
+        font-weight: bold;
+        color: #004385;
+        align-self: flex-end;
+    }
+    
+    #{$block}-count span {
+        color: #FF9505;
+        font-weight: bold;
+    }
+    
+    #{$block}-count h2 {
+        font-size: 21px;
+        font-weight: bold;
+    }
+    
+    form#{$block}-form {
+        display: flex;
+    }
+    
+    #{$block}-form input {
+        border: none;
+        border-bottom: 2px solid #004385;
+        margin-right: 10px;
+        outline: none;
+        color: #004385;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    #{$block}-form button {
+        background: blue;
+        border: none;
+    }
 }

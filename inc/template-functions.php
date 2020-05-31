@@ -100,63 +100,61 @@ add_action( 'init', 'custom_post_type_character', 0 );
  * Register custom meta Boxes
  */
 
-add_action( 'init', 'cyb_register_meta_fields' );
-function cyb_register_meta_fields() {
-  register_meta( 'character',
-               'cyb_name',
-               [
-                 'description'      => _x( 'Enter your name', 'meta description', 'cyb-textdomain' ),
-                 'single'           => true,
-                 'sanitize_callback' => 'sanitize_text_field',
-                 'auth_callback'     => 'cyb_custom_fields_auth_callback'
-               ]
-  );
-}
-
-function cyb_sanitize_extraordinary_person( $value ) {
-
-  // Si hay algún valor, el checbox fue seleccionado
-  if( ! empty( $value ) ) {
-    return 1;
-  } else {
-    return 0;
-  }
-
-}
-
-function cyb_custom_fields_auth_callback( $allowed, $meta_key, $post_id, $user_id, $cap, $caps ) {
-  
-  if( 'post' == get_post_type( $post_id ) && current_user_can( 'edit_post', $post_id ) ) {
-    $allowed = true;
-  } else {
-    $allowed = false;
-  }
-
-  return $allowed;
-
-}
-
-function global_notice_meta_box() {
+function custom_field_characters_meta_box() {
     $screens = array( 'character' );
     foreach ( $screens as $screen ) {
         add_meta_box(
             'global-notice',
             __( 'Character Information', 'dc' ),
-            'global_notice_meta_box_callback',
+            'custom_field_characters_meta_box_callback',
             $screen
         );
     }
 }
 
-add_action( 'add_meta_boxes', 'global_notice_meta_box' );
+add_action( 'add_meta_boxes', 'custom_field_characters_meta_box' );
 
+function custom_field_characters_meta_box_callback( $post ) {
+	wp_nonce_field( 'global_notice_nonce', 'global_notice_nonce' );
+	
+	$last_action = get_post_meta($post->ID, 'last_action' , true ); 
+	$source_powers = get_post_meta( $post->ID, 'source_powers', true ); 
+	$weakness = get_post_meta( $post->ID, 'weakness', true ); 
 
-function global_notice_meta_box_callback( $post ) {
-    wp_nonce_field( 'global_notice_nonce', 'global_notice_nonce' );
-    $value = get_post_meta( $post->ID, '_global_notice', true );
-    echo '<textarea style="width:100%" id="global_notice" name="global_notice">' . esc_attr( $value ) . '</textarea>';
+	?>
+		<h3>Last Criminal or Heroic Action: </h3>
+		<?php 
+			wp_editor( htmlspecialchars_decode( $last_action ), 
+				'last_action', 
+				$settings = array( 'textarea_name' => 'last_action' )
+			);
+		?>
+		<h3>
+			<?php echo __( 'Source Of Powers:','dc'); ?>
+		</h3>
+		<textarea style="width:100%" id="source_powers" name="source_powers"><?php echo esc_html( $source_powers ); ?></textarea>
+		<h3>
+			<?php echo __( 'Weaknesses:','dc'); ?>
+		</h3>
+		<textarea style="width:100%" id="weakness" name="weakness"><?php echo esc_html( $weakness ); ?></textarea>
+	<?php
+    echo '';
 }
 
+add_action( 'save_post', function($post_id) {
+    if (!empty($_POST['last_action'])) {
+		$data = $_POST['last_action'] ;
+        update_post_meta($post_id, 'last_action', $data );
+    }
+    if (!empty($_POST['source_powers'])) {
+		$data = sanitize_text_field( $_POST['source_powers'] );
+        update_post_meta($post_id, 'source_powers', $data );
+    }
+    if (!empty($_POST['weakness'])) {
+		$data = sanitize_text_field( $_POST['weakness'] );
+        update_post_meta($post_id, 'weakness', $data );
+    }
+}); 
 
 /**
  * Register custom meta Boxes
