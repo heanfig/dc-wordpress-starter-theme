@@ -9882,8 +9882,24 @@ a.text-dark:hover, a.text-dark:focus {
 	font-weight: bold;
 }
 
-.dc-character-loop form.dc-character-form {
+.dc-character-loop .dc-character-form {
 	display: flex;
+}
+
+.dc-character-loop .dc-character-form .dc-input {
+	margin: 0 15px;
+}
+
+.dc-character-loop .dc-character-form .dc-input.dc_action {
+	margin-right: 0;
+}
+
+.dc-character-loop .dc-character-form .dc-input.dc-select {
+	background: #f3943d;
+	min-width: 9em;
+	font-weight: bold;
+	color: #004385;
+	border-radius: 0;
 }
 
 .dc-character-loop .dc-character-form input {
@@ -9896,8 +9912,9 @@ a.text-dark:hover, a.text-dark:focus {
 	font-weight: bold;
 }
 
-.dc-character-loop .dc-character-form button {
-	background: blue;
+.dc-character-loop .dc-character-form .dc_action {
+	background: #FF9505;
+	color: #004385;
 	border: none;
 }
 
@@ -10091,6 +10108,18 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .single-character_container .dc-character_tabs .nav-item .nav-link i {
+	color: #FF9505;
+}
+
+.single-character_container .dc-character_meta .tagged_as {
+	font-size: 20px;
+	margin: 13px 0;
+	display: inline-block;
+	font-weight: bold;
+	color: #004385;
+}
+
+.single-character_container .dc-character_meta .tagged_as a {
 	color: #FF9505;
 }
 

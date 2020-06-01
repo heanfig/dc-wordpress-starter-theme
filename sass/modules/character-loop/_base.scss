@@ -82,8 +82,23 @@
         font-weight: bold;
     }
     
-    form#{$block}-form {
+    #{$block}-form {
         display: flex;
+        .dc-input {
+            margin: 0 15px;
+        }
+
+        .dc-input.dc_action {
+            margin-right: 0;
+        }
+
+        .dc-input.dc-select {
+            background: #f3943d;
+            min-width: 9em;
+            font-weight: bold;
+            color: #004385;
+            border-radius: 0;
+        }
     }
     
     #{$block}-form input {
@@ -96,8 +111,9 @@
         font-weight: bold;
     }
     
-    #{$block}-form button {
-        background: blue;
+    #{$block}-form .dc_action {
+        background: #FF9505;
+        color: #004385;
         border: none;
     }
 }

@@ -161,6 +161,11 @@ function dc_scripts() {
 	 */	
 	wp_enqueue_script( 'dc-font-awesome', 'https://kit.fontawesome.com/f73a4f26fe.js', array(), _S_VERSION, true );
 
+	/**
+	 * Enqueue Script Font Awesome
+	 */	
+	wp_enqueue_script( 'dc-lodash', get_template_directory_uri() . '/js/lodash.min.js', array(), _S_VERSION, true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

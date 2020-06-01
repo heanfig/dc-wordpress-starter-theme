@@ -32,6 +32,18 @@
                     }
                 }
             }
+            &_meta{
+                .tagged_as {
+                    font-size: 20px;
+                    margin: 13px 0;
+                    display: inline-block;
+                    font-weight: bold;
+                    color: #004385;
+                    a {
+                        color: #FF9505;
+                    }
+                }
+            }
         }
     }
 }
