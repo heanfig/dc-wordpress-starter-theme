@@ -41,15 +41,18 @@
                             <?php echo get_the_excerpt(); ?>
                         </div>
                         <div class="dc-character_meta"> 
-                            <span class="posted_in">
-                                <?php 
-                                    the_category();
-                                ?>
-                            </span> 
                             <span class="tagged_as">
                                 <?php 
                                     the_tags();
                                 ?>
+                            </span>
+                        </div>
+                        <div class="dc-character_meta"> 
+                            <span class="tagged_as">
+                                <?php echo __('Characeter Type:','dc'); ?>
+                                <?php foreach($taxonomies as $term){ ?>
+                                    <a rel="tax"><?php echo $term->name; ?></a>
+                                <?php } ?>
                             </span>
                         </div>
                     </div>
@@ -66,6 +69,7 @@
                             <?php if($last_action){ ?>
                                 <li class="nav-item">
                                     <a class="nav-link" id="dc-last-action-tab-link" data-toggle="tab" href="#dc-last-action-tab" role="tab" aria-controls="last-action" aria-selected="false">
+                                        <i class="fas fa-handshake"></i>
                                         <?php echo __( 'Last Action','dc'); ?>
                                     </a>
                                 </li>
@@ -74,6 +78,7 @@
                             <?php if($source_powers){ ?>
                                 <li class="nav-item">
                                     <a class="nav-link" id="dc-source-tab-link" data-toggle="tab" href="#dc-source-tab" role="tab" aria-controls="source" aria-selected="false">
+                                        <i class="fas fa-book"></i>
                                         <?php echo __( 'Source of Powers','dc'); ?>
                                     </a>
                                 </li>
@@ -82,6 +87,7 @@
                             <?php if($weakness){ ?>
                                 <li class="nav-item">
                                     <a class="nav-link" id="dc-weakness-tab-link" data-toggle="tab" href="#dc-weakness-tab" role="tab" aria-controls="weakness" aria-selected="false">
+                                        <i class="fas fa-wind"></i>
                                         <?php echo __( 'Weakness','dc'); ?>
                                     </a>
                                 </li>

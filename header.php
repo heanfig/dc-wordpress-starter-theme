@@ -36,7 +36,10 @@
 							<img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 						</a>
 					<?php else : ?>
-						<a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+						<a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
+							<img class="logo-img" src="https://www.dccomics.com/sites/all/themes/dc_comics_bp/favicon.ico" />
+							<?php esc_url(bloginfo('name')); ?>
+						</a>
 					<?php endif; ?>
 				</div>
 				
@@ -60,9 +63,24 @@
 			</div>
 		</nav>
 		<div class="subnav character-menu">
+			<?php 
+				$taxonomies = get_terms( 
+					array(
+						'taxonomy' => 'character_type',
+						'hide_empty' => false,
+					) 
+				); 
+			?>
 			<ul>
-				<li>Heroes</li>
-				<li>Villains</li>
+				<?php if( count($taxonomies) > 0 ){ ?>
+					<?php foreach($taxonomies as $term){ ?>
+						<li>
+							<a href="<?php echo get_term_link($term->term_id); ?>">
+								<?php echo $term->name; ?>
+							</a>
+						</li>
+					<?php } ?>
+				<?php } ?>
 			</ul>
 		</div>
 	</header><!-- #masthead -->

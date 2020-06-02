@@ -1,4 +1,7 @@
 .dc-carousel{
+    @media screen and (max-width: 840px) {
+        display: none;
+    }
     &.no_overlay{
         .carousel-item{
             &:before {

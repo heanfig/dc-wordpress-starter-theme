@@ -43,23 +43,19 @@
 					<h5> <?php echo __( 'About the Autor', 'dc'); ?> </h5>
 					<ul>
 						<li>
-							<span class="dashicons dashicons-twitter"></span>
-							<a href="">@heanfig</a>
+							<i class="fab fa-github"></i>
+							<a target="__blank" href="https://github.com/heanfig">@heanfig</a>
 						</li>
 						<li>
-							<span class="dashicons dashicons-instagram"></span>
-							<a href="">@heanfig</a>
-						</li>
-						<li>
-							<span class="dashicons dashicons-admin-links"></span>
-							<a href="">@heanfig</a>
+							<i class="fab fa-facebook"></i>
+							<a target="__blank" href="https://www.facebook.com/uyguhbgyi8">@uyguhbgyi8</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="dc-footer_copy">
 				<p>
-					All Site Content and © 2020 DC Entertainment
+					<?php echo __('All Site Content and © 2020 DC Entertainment', 'dc'); ?> 
 				</p>
 			</div>
 		</div>

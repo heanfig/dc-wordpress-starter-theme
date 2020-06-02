@@ -11,8 +11,13 @@
                 float: left;
                 padding: 0rem 1rem;
             }
+            &_details{
+                @media screen and (max-width: 840px) {
+                    display: none;
+                }
+            }
             &_title {
-                color: #004385;
+                color: $c3-accent;
                 font-weight: bold;
             }
             &_tabs{
@@ -25,7 +30,7 @@
                 }
                 
                 .nav-item .nav-link {
-                    color: #004385;
+                    color: $c3-accent;
                     font-weight: bold;
                     i{
                         color: #FF9505;
@@ -38,7 +43,7 @@
                     margin: 13px 0;
                     display: inline-block;
                     font-weight: bold;
-                    color: #004385;
+                    color: $c3-accent;
                     a {
                         color: #FF9505;
                     }

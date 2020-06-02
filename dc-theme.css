@@ -9751,6 +9751,11 @@ a.text-dark:hover, a.text-dark:focus {
 	cursor: pointer;
 }
 
+.subnav li a {
+	color: #ffffff;
+	font-weight: bold;
+}
+
 .dc-page-header {
 	background-image: url(https://i.redd.it/af5uskv42v3z.jpg);
 	color: #FF9505;
@@ -9793,9 +9798,17 @@ a.text-dark:hover, a.text-dark:focus {
 	margin: 2rem 0;
 }
 
+@media screen and (max-width: 640px) {
+	.dc-character-loop {
+		padding: 15px;
+	}
+}
+
 .dc-character-loop_content {
 	position: relative;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .dc-character-loop_content .dc-character-item {
@@ -9821,6 +9834,18 @@ a.text-dark:hover, a.text-dark:focus {
 	margin: 0;
 }
 
+@media screen and (max-width: 840px) {
+	.dc-character-loop_content .dc-character-item .card .card-title {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.dc-character-loop_content .dc-character-item .card .card-title {
+		font-size: 11px;
+	}
+}
+
 .dc-character-loop_content .dc-character-item .card .card-meta {
 	padding: 0;
 	margin: 0;
@@ -9836,11 +9861,23 @@ a.text-dark:hover, a.text-dark:focus {
 	transform: scale(1.05);
 }
 
+@media screen and (max-width: 840px) {
+	.dc-character-loop_content .dc-character-item {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.dc-character-loop_content .dc-character-item {
+		width: 33.3%;
+	}
+}
+
 .dc-character-loop_content .dc-character-preloader {
 	width: 100%;
 	position: absolute;
 	height: 100%;
-	background: #004385bd;
+	background: #004385;
 	z-index: 9;
 }
 
@@ -9860,9 +9897,33 @@ a.text-dark:hover, a.text-dark:focus {
 	color: #fff;
 }
 
+.dc-character-loop_content .dc-character-not_found {
+	width: 100%;
+	min-height: 400px;
+	background: rgba(0, 67, 133, 0.54);
+	background-image: url(https://www.dccomics.com/sites/all/themes/dc_comics_bp/images/logo-background-v2.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.dc-character-loop_content .dc-character-not_found span {
+	color: #004385;
+	font-size: 4em;
+	font-weight: bold;
+	position: absolute;
+	width: 6em;
+	left: 0;
+	height: 2em;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	top: 0;
+}
+
 .dc-character-loop .dc-character-filter {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin: 8px 0;
 }
 
@@ -9884,6 +9945,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .dc-character-loop .dc-character-form {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .dc-character-loop .dc-character-form .dc-input {
@@ -9900,6 +9962,14 @@ a.text-dark:hover, a.text-dark:focus {
 	font-weight: bold;
 	color: #004385;
 	border-radius: 0;
+}
+
+@media screen and (max-width: 640px) {
+	.dc-character-loop .dc-character-form .dc-input.dc-select {
+		width: 100%;
+		min-height: 38px;
+		margin: 9px 0px;
+	}
 }
 
 .dc-character-loop .dc-character-form input {
@@ -10024,6 +10094,12 @@ a.text-dark:hover, a.text-dark:focus {
 	border-color: rgba(1, 111, 185, 0.2);
 }
 
+@media screen and (max-width: 840px) {
+	.dc-carousel {
+		display: none;
+	}
+}
+
 .dc-carousel.no_overlay .carousel-item:before {
 	display: none;
 }
@@ -10085,6 +10161,12 @@ a.text-dark:hover, a.text-dark:focus {
 	width: 75%;
 	float: left;
 	padding: 0rem 1rem;
+}
+
+@media screen and (max-width: 840px) {
+	.single-character_container .dc-character_details {
+		display: none;
+	}
 }
 
 .single-character_container .dc-character_title {
