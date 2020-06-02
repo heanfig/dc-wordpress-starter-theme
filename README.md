@@ -11,6 +11,18 @@ It is a base topic for the presentation of a technical test for senior developer
 # Changelog
 
   - Add Custom post Types
+  
+
+# Playground in live mode
+
+http://li1536-186.members.linode.com/dc/
+
+Worpress:
+http://li1536-186.members.linode.com/dc/wp-login.php
+
+**user**: root
+
+**pwd**: root
 
 # Technologies Using
 Dillinger uses a number of open source projects to work properly:

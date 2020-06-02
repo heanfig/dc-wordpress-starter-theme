@@ -57,6 +57,12 @@ function dc_register_required_plugins() {
 			'is_callable' => '',
 		),
 		array(
+			'name'        => 'DC Core',
+			'slug'        => 'dc-core',
+			'required'    => true, 
+			'is_callable' => '',
+		),
+		array(
 			'name'        => 'WordPress Importer',
 			'slug'        => 'wordpress-importer',
 			'required'    => true, 
