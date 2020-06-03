@@ -13,7 +13,10 @@ It is a base topic for the presentation of a technical test for senior developer
 # Features
 
 - Visual GUI editor for shortcodes
-- [![Build Status](https://i.imgur.com/50T6VdC.png)](https://i.imgur.com/50T6VdC.pngr)
+- Before
+- [![Build Status](https://i.imgur.com/50T6VdC.png)](https://i.imgur.com/50T6VdC.png)
+- After
+- [![Build Status](https://i.imgur.com/GNJIfpe.png)](https://i.imgur.com/GNJIfpe.png)
 - AJAX Support
 - Templates Pages Wordpress
 - Custom post types
@@ -43,6 +46,12 @@ The element filter shortvode
 # Preserve Theme customization
 
 The theme configuration is preserved in such a way that you can change the logo, add menus and preserve the characteristics of the theme as such.
+
+# Thid Party (Plugins Required) (Included in TGMPA Engine)
+
+- Wordpress Importer
+- Backery Visual Composer (IMPORTANT for shortcodes)
+- Clasic Editor, Disables guttember editor
 
 # Playground in live mode
 
@@ -100,7 +109,7 @@ Release: https://github.com/heanfig/dc-wordpress-starter-theme/releases/tag/1.0
 
 - [![Build Status](https://i.imgur.com/xTfikez.png)](https://i.imgur.com/xTfikez.png)
 
-- **Wordpress importer(IMPORTANT)** check option download attachments for major experience in this playground the author field is optional
+- **Import Process (IMPORTANT)** check option download attachments for major experience in this playground the author field is optional
 
 - **NOTE:** import files and content only after activating all plugins and theme
 
@@ -108,8 +117,6 @@ Release: https://github.com/heanfig/dc-wordpress-starter-theme/releases/tag/1.0
 
 - view inicio page
 - [![Build Status](https://i.imgur.com/LEkPXAO.png)](https://i.imgur.com/LEkPXAO.png)
-
-
 
 
 ### TODOS
