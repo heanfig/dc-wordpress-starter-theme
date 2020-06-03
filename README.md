@@ -21,6 +21,16 @@ It is a base topic for the presentation of a technical test for senior developer
 
 # Shortcodes
 
+## [dc_character_filter]
+List All Character Types:
+#### "character_title" => Show Title (Text)
+#### "character_subtitle" => Show Subtitle (Text)
+#### "character_type" => Filter characters by type
+#### "type_filter" => Open Filters (AJAX MODE)
+
+## [dc_carousel]
+#### "gallery_items" => show max limit
+#### "show_overlay" => Show overlay
 
 # Plugin: DC Core
 
@@ -48,6 +58,9 @@ uses a number of open source projects to work properly:
 ### Installation Instructions 
 
 - Download theme from **Releases tab** or download this repo (with folder)
+https://github.com/heanfig/dc-wordpress-starter-theme/releases/download/1.0/dc-theme.zip
+
+Release: https://github.com/heanfig/dc-wordpress-starter-theme/releases/tag/1.0
 
 - Upload Theme from Wordpres:
 [![Build Status](https://i.imgur.com/xaUWi3O.png)](https://travis-ci.org/joemccann/dillinger)
