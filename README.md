@@ -76,7 +76,7 @@ uses a number of open source projects to work properly:
 
 ### Installation Instructions 
 
-- Download theme from **Releases tab** or download this repo (with folder)
+- Download theme from **Releases tab** or download this repo (witouth node_modules folder, no neccesary for prod mode)
 https://github.com/heanfig/dc-wordpress-starter-theme/releases/download/1.0/dc-theme.zip
 
 Release: https://github.com/heanfig/dc-wordpress-starter-theme/releases/tag/1.0
@@ -97,7 +97,7 @@ Release: https://github.com/heanfig/dc-wordpress-starter-theme/releases/tag/1.0
 [![Build Status](https://i.imgur.com/FscbWTT.pngg)](https://travis-ci.org/joemccann/dillinger)
 [![Build Status](https://i.imgur.com/Vi5Z1EC.png)](https://travis-ci.org/joemccann/dillinger)
 
-- **Upload dummy data** Download dummy data (sent by email) and upload XML using Wordpress Importer Plugin
+- **Upload dummy data** Download dummy data (sent by email) or download sample in releases tab and upload XML using Wordpress Importer Plugin
 
 - [![Build Status](https://i.imgur.com/Vmxdher.png)](https://travis-ci.org/joemccann/dillinger)
 
