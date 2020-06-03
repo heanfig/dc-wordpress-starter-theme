@@ -34,6 +34,16 @@ List All Character Types:
 
 # Plugin: DC Core
 
+Contains Base plugin to manage filter of characters(contains shortcodes)
+
+It contains the plugin that adds the 2 shortcodes:
+The carousel shortcode
+The element filter shortvode
+
+# Preserve Theme customization
+
+The theme configuration is preserved in such a way that you can change the logo, add menus and preserve the characteristics of the theme as such.
+
 # Playground in live mode
 
 http://li1536-186.members.linode.com/dc/
