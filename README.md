@@ -6,12 +6,23 @@
 
 It is a base topic for the presentation of a technical test for senior developers wordpress for blankfactor
 
-  - Custom Character Types Filter
-
 # Changelog
 
   - Add Custom post Types
-  
+
+# Features
+
+- Visual GUI editor for shortcodes
+- [![Build Status](https://i.imgur.com/50T6VdC.png)](https://i.imgur.com/50T6VdC.pngr)
+- AJAX Support
+- Templates Pages Wordpress
+- Custom post types
+- WP Query Support
+
+# Shortcodes
+
+
+# Plugin: DC Core
 
 # Playground in live mode
 
@@ -25,13 +36,14 @@ http://li1536-186.members.linode.com/dc/wp-login.php
 **pwd**: root
 
 # Technologies Using
-Dillinger uses a number of open source projects to work properly:
+uses a number of open source projects to work properly:
 
-* [TGMPA](http://tgmpluginactivation.com/) - Wordpress Framework Engine for create one click theme install from Envato
+* [TGMPA](http://tgmpluginactivation.com/) - Wordpress Framework Engine for create one click theme install from Envato themeforest
 * [Twitter Bootstrap](https://getbootstrap.com/) - great UI boilerplate for modern web apps
-* [Visual Composer API](https://visualcomposer.com/) - Wordpress Framework to add flavors to shortcodes
-* [jQuery] - duh
-* [SASS] - duh
+* [Visual Composer API](https://visualcomposer.com/) - Wordpress Framework to add flavors to shortcodes, visual GUI interface
+* [SASS] - css with superpowers
+* [jQuery] - ...
+* [underscores.me] Starter theme development
 
 ### Installation Instructions 
 
@@ -53,6 +65,25 @@ Dillinger uses a number of open source projects to work properly:
 [![Build Status](https://i.imgur.com/FscbWTT.pngg)](https://travis-ci.org/joemccann/dillinger)
 [![Build Status](https://i.imgur.com/Vi5Z1EC.png)](https://travis-ci.org/joemccann/dillinger)
 
+- **Upload dummy data** Download dummy data (sent by email) and upload XML using Wordpress Importer Plugin
+
+- [![Build Status](https://i.imgur.com/Vmxdher.png)](https://travis-ci.org/joemccann/dillinger)
+
+- **Wordpress importer** Select Wordpress Option from importer
+
+- [![Build Status](https://i.imgur.com/5XwibCE.png)](https://i.imgur.com/5XwibCE.png)
+- 
+- **Wordpress importer** Select XML file to import
+
+- [![Build Status](https://i.imgur.com/xTfikez.png)](https://i.imgur.com/xTfikez.png)
+
+- **Wordpress importer(IMPORTANT)** check option download attachments for major experience in this playground the author field is optional
+
+- **NOTE:** import files and content only after activating all plugins and theme
+
+- [![Build Status](https://i.imgur.com/gzl1sz0.png)](https://i.imgur.com/xTfikez.png)
+
+
 ### TODOS
 
  - Write more README
@@ -65,7 +96,7 @@ MIT
 
 **Free Software, Hell Yeah!**
 
-### DEVELOP MODE
+### Develop This Theme
 
 To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
 

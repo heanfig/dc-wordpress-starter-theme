@@ -9966,7 +9966,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media screen and (max-width: 640px) {
 	.dc-character-loop .dc-character-form .dc-input.dc-select {
-		width: 100%;
+		min-width: auto;
 		min-height: 38px;
 		margin: 9px 0px;
 	}
@@ -9986,6 +9986,12 @@ a.text-dark:hover, a.text-dark:focus {
 	background: #FF9505;
 	color: #004385;
 	border: none;
+}
+
+@media screen and (max-width: 640px) {
+	.dc-character-loop .dc-character-form .dc_action span {
+		display: none;
+	}
 }
 
 .dc-heading {

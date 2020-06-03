@@ -57,10 +57,11 @@ function dc_register_required_plugins() {
 			'is_callable' => '',
 		),
 		array(
-			'name'        => 'DC Core',
-			'slug'        => 'dc-core',
-			'required'    => true, 
-			'is_callable' => '',
+			'name'               => 'DC Core',
+			'slug'               => 'dc-core', 
+			'source'             => get_template_directory() . '/inc/tgm/plugins/dc-core.zip', 
+			'required'           => true, 
+			'force_activation'   => true
 		),
 		array(
 			'name'        => 'WordPress Importer',

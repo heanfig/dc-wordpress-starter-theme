@@ -140,7 +140,7 @@
             border-radius: 0;
 
             @media screen and (max-width: 640px) {
-                width: 100%;
+                min-width: auto;
                 min-height: 38px;
                 margin: 9px 0px;
             }
@@ -162,5 +162,10 @@
         background: #FF9505;
         color: $c3-accent;
         border: none;
+        @media screen and (max-width: 640px) {
+            span{
+                display: none;
+            }
+        }
     }
 }
