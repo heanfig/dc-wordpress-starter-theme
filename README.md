@@ -83,6 +83,11 @@ uses a number of open source projects to work properly:
 
 - [![Build Status](https://i.imgur.com/gzl1sz0.png)](https://i.imgur.com/xTfikez.png)
 
+- view inicio page
+- [![Build Status](https://i.imgur.com/LEkPXAO.png)](https://i.imgur.com/LEkPXAO.png)
+
+
+
 
 ### TODOS
 
